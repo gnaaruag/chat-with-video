@@ -7,13 +7,7 @@ import { uploadFileInMemory } from '@/utils/uploadFileInMemory';
 dotenv.config();
 const apiKey: string = process.env.API_KEY!;
 
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '100mb', // Adjust size as needed
-    },
-  },
-};
+
 
 const genAI = new GoogleGenerativeAI(apiKey);
 const fileManager = new GoogleAIFileManager(apiKey);
