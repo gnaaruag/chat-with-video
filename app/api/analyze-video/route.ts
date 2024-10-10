@@ -30,7 +30,7 @@ export async function POST(req: Request) {
     const buffer = await file.arrayBuffer();
     const params = {
       Bucket: process.env.AWS_S3_BUCKET_NAME!,
-      Key: `${Date.now()}_${file.name}`,
+      Key: `${file.name}`,
       Body: Buffer.from(buffer),
       ContentType: file.type,
     };
